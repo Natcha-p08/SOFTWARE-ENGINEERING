@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+</head>
+    <header>
+        <meta charset="UTF-8">
+        <title>คำร้องขอเพิ่ม/ถอนรายวิชา</title>
+        <script  src="controller.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,300;1,300&family=Merriweather:ital,wght@1,300&family=Mitr:wght@300&family=Noto+Serif+Thai&display=swap" rel="stylesheet">
+        <div class="head"> 
+            <div class="text-box">
+                <h1>คำร้องขอเพิ่ม/ถอนรายวิชา </h1>   
+                 <h2 class="text-center">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</h2>
+                 </div>        
+             </div>
+    </header>    
+    <br>
+    <form action="process_course.php" method="post">
+
+        <div class="right">          
+                <label for="date">วันที่ (DD/MM/YYYY):</label>
+                <input type="datetime-local" id="date" name="date" pattern="\d{2}/\d{2}/\d{4}" placeholder="DD/MM/YYYY" required>
+            </div>
+            <br>
+            <b>เรื่อง  <input type="text" style="width: 250px;" id="subject"></b></p> 
+            <b>เรียน   คณบดีคณะวิทยาศาสตร์และเทคโนโลยี </b>
+        <div class="centered">
+            <h2 class= "text-box2">ข้อมูลส่วนบุคคล</h2>
+        <div class= "text-box3" >
+        <label for="prefix">คำนำหน้า:</label>
+        <select id="prefix" name="prefix">
+            <option value="Mr">นาย</option>
+            <option value="Mrs">นาง</option>
+            <option value="Miss">นางสาว</option>
+        </select>
+        <label for="first_name">ชื่อ:</label>
+        <input type="text" id="studentFirstName" name="studentFirstName" required>
+
+        <label for="last_name">นามสกุล:</label>
+        <input type="text" id="studentLastName" name="studentLastName" required>
+
+        <label for="student_id">เลขรหัสนักศึกษา:</label>
+        <input type="text" id="studentId" name="studentId" requiredp pattern="{10}" title="โปรดระบุเลขรหัสนักศึกษา 10 หลัก" placeholder = "ระบุเลขรหัสนักศึกษา 10 หลัก" >
+
+        <label for="studentYear">ชั้นปีที่:</label>
+        <select id="studentYear" name="studentYear" required>
+            <option value="1">1 </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+        <label for="studentField">สาขาวิชา:</label>
+        <select id="studentField" name="studentField" required> <br><br>
+            <option value="เคมี">เคมี</option>
+            <option value="สถิติ">สถิติ</option>
+            <option value="ฟิสิกส์">ฟิสิกส์</option>
+            <option value="วัสดุศาสตร์">วัสดุศาสตร์</option>
+            <option value="คณิตศาสตร์">คณิตศาสตร์</option>                   
+            <option value="เทคโนโลยีชีวภาพ">เทคโนโลยีชีวภาพ</option>
+            <option value="คณิตศาสตร์ประยุกต์">คณิตศาสตร์ประยุกต์</option>    
+            <option value="วิทยาการคอมพิวเตอร์">วิทยาการคอมพิวเตอร์</option>       
+            <option value="เทคโนโลยีการเกษตร">เทคโนโลยีการเกษตร</option>
+            <option value="วิทยาศาสตร์สิ่งแวดล้อม">วิทยาศาสตร์สิ่งแวดล้อม</option>
+            <option value="เทคโนโลยีเพื่อการพัฒนายั่งยืน">เทคโนโลยีเพื่อการพัฒนายั่งยืน</option>
+            <option value="วิทยาศาสตร์และเทคโนโลยีสิ่งทอ">วิทยาศาสตร์และเทคโนโลยีสิ่งทอ</option>
+            <option value="วิทยาศาสตร์และนวัตกรรมทางอาหาร">วิทยาศาสตร์และนวัตกรรมทางอาหาร</option>
+            <option value="วิทยาศาสตร์และเทคโนโลยีการอาหาร">วิทยาศาสตร์และเทคโนโลยีการอาหาร</option>
+        </select>
+
+        <br><br>
+        <label for="addressNumber">ที่อยู่บ้านเลขที่:</label>
+        <input type="text" id="moo" name="moo" required>
+       
+
+        <label for="moo">หมู่:</label>
+        <input type="text" id="moo" name="moo" required>
+
+        <label for="district">ตำบล:</label>
+        <input type="text" id="district" name="district" required>
+
+        <label for="amphur">อำเภอ:</label>
+        <input type="text" id="amphur" name="amphur" required>
+
+        <label for="province">จังหวัด:</label>
+        <input type="text" id="province" name="province" required>
+
+        <label for="postalCode">รหัสไปรษณีย์:</label>
+        <input type="text" id="postalCode" name="postalCode" pattern="{5}" placeholder = "ระบุเลข 5 หลัก" required>
+
+        <br><br>
+        <label for="mobile_phone">เบอร์โทรศัพท์มือถือ:</label>
+        <input type="text" id="mobilePhone" name="mobile_phone" pattern="{10}" placeholder = "ระบุเลข 10 หลัก"required>
+
+        <label for="home_phone">เบอร์โทรศัพท์บ้าน:</label>
+        <input type="text" id="homePhone" name="home_phone" pattern="{10}" placeholder = "ถ้ามี ระบุเลข 10 หลัก">
+
+        <label for="advisor">อาจารย์ที่ปรึกษา:</label>
+        <input type="text" id="advisor" name="advisor" required>
+
+        </div>
+    </div>
+      
+    <center>
+       
+        <h2 class= "text-box2">ข้อมูลรายวิชา</h2>
+        
+        <div class="text-box3">
+            <b>ขอยื่นลงทะเบียน เพิ่ม <input type="radio" id="add2" name="add2" value="value3"> / ถอน <input type="radio" id="quit2" name="quit2" value="value4"></b>
+            <br><br>
+            
+            <center>
+                <div class="text-box3">
+                        <b class = "text-box4" class="=center"> ตารางลงทะเบียนเพิ่ม </b>
+                    <br><br>
+                    <table border="1">
+                        <tr>
+                            <th>ลำดับ</th>
+                            <th>รหัสวิชา</th>
+                            <th>ชื่อวิชา</th>
+                            <th>section</th>
+                            <th>วัน/เวลา</th>
+                            <th>หน่วยกิต</th>
+                            <th>ชื่อผู้สอน</th>
+                            <th>ผู้สอนอณุญาต</th>
+                        </tr>
+                        <script>
+                            for (let i = 1; i <= 11; i++) {
+                                    document.write("<tr>");
+                                    document.write("<td>" + i + "</td>");
+                                    document.write("<td><input type='text' name='รหัสวิชา_" + i + "'></td>");
+                                    document.write("<td><input type='text' name='ชื่อวิชา_" + i + "'></td>");
+                                    document.write("<td><input type='text' name='section_" + i + "'></td>");
+                                    document.write("<td><input type='text' name='วัน/เวลา_" + i + "'></td>");
+                                    document.write("<td><input type='text' name='หน่วยกิต_" + i + "'></td>");
+                                    document.write("<td><input type='text' name='ชื่อผู้สอน_" + i + "'></td>");
+                                    document.write("<td><input type='text' name='ผู้สอนอนุญาต_" + i + "'></td>");
+                                    document.write("</tr>");
+                            }
+                        </script>
+                        </table>
+                    </center>
+                    
+                    <br><br>
+
+                    <center>
+                        <div class="text-box3">
+                                <b class = "text-box4" class="=center" >  ตารางลงทะเบียนถอน </b>
+                            <br><br>
+                            <table border="1">
+                                <tr>
+                                    <th>ลำดับ</th>
+                                    <th>รหัสวิชา</th>
+                                    <th>ชื่อวิชา</th>
+                                    <th>section</th>
+                                    <th>วัน/เวลา</th>
+                                    <th>หน่วยกิต</th>
+                                    <th>ชื่อผู้สอน</th>
+                                    <th>ผู้สอนอณุญาต</th>
+                                </tr>
+                                <script>
+                                    for (let i = 1; i <= 11; i++) {
+                                            document.write("<tr>");
+                                            document.write("<td>" + i + "</td>");
+                                            document.write("<td><input type='text' name='รหัสวิชา_" + i + "'></td>");
+                                            document.write("<td><input type='text' name='ชื่อวิชา_" + i + "'></td>");
+                                            document.write("<td><input type='text' name='section_" + i + "'></td>");
+                                            document.write("<td><input type='text' name='วัน/เวลา_" + i + "'></td>");
+                                            document.write("<td><input type='text' name='หน่วยกิต_" + i + "'></td>");
+                                            document.write("<td><input type='text' name='ชื่อผู้สอน_" + i + "'></td>");
+                                            document.write("<td><input type='text' name='ผู้สอนอนุญาต_" + i + "'></td>");
+                                            document.write("</tr>");
+                                    }
+                                </script>
+                                </table>
+                            </center>
+                            
+            <br><br>
+            <label>เพราะ</label>
+                <textarea id="reason" name="reason" rows="2" cols="100" required></textarea>
+        </div>
+        </div>
+        </div>
+        <br><br>   
+        <input type="submit" value="ยืนยันการส่งแบบฟอร์ม"><br><br>
+        </center>
+
+</form>
+</body>
+</html>
+
+       
+        
+        
+

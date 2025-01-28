@@ -1,0 +1,77 @@
+body {  
+    background-color: #f0f0eb;
+    font-family: 'Mitr', sans-serif;
+    }
+.head {
+    text-align: center;
+    font-style: normal;
+    font-size: auto;
+}
+.centered {
+    text-align: center;
+}
+input[type="text"], select{
+    width: 100px;
+    padding: 3px;
+    border: 1px solid #b2b6af;
+    border-radius: 3px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.text-box {
+    border: 1.5px solid #000000;
+    padding: 10px; 
+    padding-left: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    background-color: #c44227e6; 
+    border-style: solid;
+    border-radius: 10px;
+    color: #f8f4ef;
+}
+.text-box2 {
+    border: 1px solid #000;
+    padding-left: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    background-color: #cccccc; 
+    border-style: dotted ;
+    border-radius : 5px;   
+    padding: 2px;
+}
+.text-box3 {
+    border: 1px solid #000;
+    padding-left: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    background-color: #d9d6d6; 
+    border-style: dotted ;
+    border-radius : 5px;   
+    padding: 40px;
+    color: #0b0b0b;
+}
+.text-box4{
+    border-radius : 5px;  
+    padding-left: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px; 
+    padding: 2px;
+    border-style:groove;
+   
+}
+.left{
+    margin-bottom: 20px;
+    left: 50px;
+}
+.right{
+    text-align: right;
+}
+table,th,tr {
+    border: 1.5px solid rgb(25, 55, 15);
+    border-collapse: collapse;
+    text-align: center;
+}
